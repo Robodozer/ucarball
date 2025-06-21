@@ -1,7 +1,7 @@
 include requirements.txt
-include CARBALL_VERSION
+include ucarball_VERSION
 include init.py
-include carball/analysis/*
-exclude carball/generated/*
-recursive-include carball/generated/api *.py
-recursive-include carball *.xlsx
+include ucarball/analysis/*
+exclude ucarball/generated/*
+recursive-include ucarball/generated/api *.py
+recursive-include ucarball *.xlsx

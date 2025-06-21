@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = carball
+source = ucarball
 
 [report]
 exclude_lines =
@@ -10,9 +10,9 @@ exclude_lines =
     if __name__ == .__main__.:
 omit =
     tests/*
-    carball/tests/*
+    ucarball/tests/*
     utils/tests/*
     init.py
     setup.py
     command_line.py
-    carball/controls/*
+    ucarball/controls/*

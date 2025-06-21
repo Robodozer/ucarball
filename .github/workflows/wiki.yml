@@ -30,7 +30,7 @@ jobs:
       run: python init.py
 
     - name: Create document
-      run: python -m carball.tests.docs.data_frame_docs
+      run: python -m ucarball.tests.docs.data_frame_docs
 
     - name: wiki-page-creator-action
       uses: Decathlon/wiki-page-creator-action@v2.0.0
@@ -39,6 +39,6 @@ jobs:
         ACTION_MAIL: saltie.calculated.gg@gmail.com
         ACTION_NAME: saltie
         OWNER: SaltieRL
-        REPO_NAME: carball
-        MD_FOLDER: carball/tests/docs/
+        REPO_NAME: ucarball
+        MD_FOLDER: ucarball/tests/docs/
         SKIP_MD: df_methods.md, df_summary.md

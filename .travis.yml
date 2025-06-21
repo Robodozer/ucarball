@@ -15,7 +15,7 @@ addons:
 cache:
   - pip
   - directories:
-      - carball/generated/binaries
+      - ucarball/generated/binaries
       - protobuf-2.6.1/src/
 
 # We only build if it is a pr into master or it is a pr and it is not into master
@@ -35,7 +35,7 @@ install:
 
 script:
 - pytest --cov=./ --ignore=protobuf-2.6.1/
-- bash <(curl -s https://codecov.io/bash) -c -F carball
+- bash <(curl -s https://codecov.io/bash) -c -F ucarball
 
 after_success:
 - codecov
@@ -58,7 +58,7 @@ jobs:
           secure: IgeO5fZQXWRx0LEOLuilkLTP1Hi15Lv86jAySHsPgR1NNOkst+zDy2awOSJ6kThIhozD4wAqBeIpEaCNoq3516O/AIrZmcaOrZWFZqU9Lb+YqH8AVlz1XjkR/hO1msRG+nQKoDzOGo6DtDb0nu9iJVYcHiTv9yQbe+h97oVWeA3MxRdaxbJWfAiAVD7xmbRG+PENQv/wCu6sHPuDlOfKDun5F6POvgLp+4zcwHn1Q+fq2sh8AvJ5uGofBpvky+171bRtVBxhmhABEECvXUlJig/uvyjG7onwwkZJOQMl75mONm1wuzZBpd+hxrNCdOtDN/2wrRuXJH99itoe1Y71IVNgwXsp1DrewzM3i7Y3ivBooywNoScgnJOu8D/Ip/WOgGOXnU+NN11+/zlq/h0j0wiVIwC34dGOo4EjA1cnWVgih2m9YL7xJ5YglZrw7RmkgxIRzrfRmreUelsH735aASlkyy5357uWdKtbhX9kOBgtxHr2b2TeWnvZIdKMX7aiDHc4fW3L2Ml9tb7nJAZzQ1+7APyO0z05iau7G4ZBVFP0a2HS6GguZpcI3zFk+4zZ00pQEvUI9fdTt+Q9PnFMpu7Y+94DWMEXkTWGjT5l4uopbvaiMWb1GlsTlDNWy8mwDhO6wKtpReqslesQ9+6Mzgxmausw/CokOodxhowJyoE=
         file: README.md
         on:
-          repo: SaltieRL/carball
+          repo: SaltieRL/ucarball
           branch: master
           type: push
           tags: true
@@ -69,7 +69,7 @@ jobs:
         user: $PYPI_LOGIN
         password: $PYPI_PASSWORD
         on:
-          repo: SaltieRL/carball
+          repo: SaltieRL/ucarball
           branch: master
           type: push
     - stage: announcement

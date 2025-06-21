@@ -11,9 +11,9 @@ coverage:
     project:
       default:
         threshold: 1
-      carball:
+      ucarball:
         threshold: 0.5
-        flags: carball
+        flags: ucarball
     patch: off
     changes: no
 
@@ -33,17 +33,17 @@ comment:
 
 flags:
   # filter the folder(s) you wish to measure by that flag
-  carball:
+  ucarball:
     # only include files in the backend folder
     paths:
-      - "!carball/tests"
-      - carball/*
+      - "!ucarball/tests"
+      - ucarball/*
 ignore:
   - tests/*
-  - carball/tests/*
+  - ucarball/tests/*
   - utils/tests/*
   - init.py
   - setup.py
   - command_line.py
-  - carball/controls/*
+  - ucarball/controls/*
 

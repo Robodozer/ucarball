@@ -8,9 +8,9 @@ output
 .coverage
 *.iml
 build/
-carball.egg*
+ucarball.egg*
 dist/
 *ipynb*
 
-!/carball/tests/replays/
+!/ucarball/tests/replays/
 .vscode

@@ -6,11 +6,11 @@ from setuptools import setup
 from setuptools.command.develop import develop
 from setuptools.command.install import install
 
-with open(os.path.join('carball', 'analysis', 'PROTOBUF_VERSION'), 'r') as f:
+with open(os.path.join('ucarball', 'analysis', 'PROTOBUF_VERSION'), 'r') as f:
     PROTOBUF_VERSION = json.loads(f.read())
 
 
-with open(os.path.join('CARBALL_VERSION'), 'r') as f:
+with open(os.path.join('ucarball_VERSION'), 'r') as f:
     subversion = json.loads(f.read())
 
 version_string = '0.' + str(PROTOBUF_VERSION) + '.' + str(subversion)
@@ -43,16 +43,22 @@ class PostInstallCommand(install):
 
 
 setup(
-    name='carball',
+    name='ucarball',
     version=version_string,
     packages=setuptools.find_packages(),
     include_package_data=True,
-    install_requires=['pandas==1.0.3', 'protobuf==3.6.1', 'xlrd==1.1.0', 'numpy==1.18.2', 'boxcars-py==0.1.*'],
-    url='https://github.com/SaltieRL/carball',
+    install_requires=[
+        'pandas>=2.3.0',
+        'protobuf>=4.21.0',
+        'xlrd>=2.0.0',
+        'numpy>=1.23.0',
+        'uboxcars-py==0.1.*'
+    ],
+    url='https://github.com/SaltieRL/ucarball',
     keywords=['rocket-league'],
     license='Apache 2.0',
-    author='Matthew Mage, Harry Xie, David Turner',
-    author_email='sciguymjm@gmail.com',
+    author='AirwolfTomato, sciguymjm, and contributors',
+    author_email='vijay@ashokn.org',
     description='Rocket League replay parsing and analysis.',
     long_description=long_description,
     exclude_package_data={'': ['.gitignore', '.git/*', '.git/**/*', 'replays/*']},
@@ -62,6 +68,6 @@ setup(
         'install': PostInstallCommand,
     },
     entry_points={
-        'console_scripts': ['carball=carball.command_line:main']
+        'console_scripts': ['ucarball=ucarball.command_line:main']
     }
 )
